@@ -10,3 +10,13 @@ Design the classes for the above. You need to design the classes only and not th
 
 3. Your application needs a number sequence and there can be different kinds of sequences, like a sequence of random numbers, prime numbers, squares, odd numbers, etc. Different scenarios may use different sequences. A sequence generator should accept the kind of sequence and number of values in sequence and generate and display the sequence.<br />
 Design and implement the classes that you will be need to achieve the above. Use a test class to test the generation of the different number sequences.
+
+4.  You have to design an application for a user holding a Bank Account. Following are the requirements:
+        There can be different kinds of bank accounts.
+        The checking account has no interest, gives you a small number of free transactions per month, and charges a transaction fee for each additional transaction.
+        The savings account earns interest that compounds monthly. The interest will be computed on the minimum balance for the month.
+        The fees will be deducted from CheckingAccount at end of month.
+        Interest on SavingsAccount will be added at end of month.
+        There should be a custom exception when the account is constructed with a negative balance, when a negative amount is deposited, or when an amount that is not between 0 and the current balance is withdrawn.
+
+Design classes for the above.
