@@ -2,3 +2,7 @@
 .metadata
 .recommenders
 .sonarlint
+.plugins
+/**/.metadata
+/**/.plugins
+/**/.sonarlint
