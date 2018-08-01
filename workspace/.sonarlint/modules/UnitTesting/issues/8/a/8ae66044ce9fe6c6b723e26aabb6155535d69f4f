@@ -1,6 +1,6 @@
 
-ssquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8í«™ÿÌ,H·RMAJORZBUG
-jsquid:S1135	"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8í«™ÿÌ,H´RINFOZ
-CODE_SMELL
+ssquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8í«™ÿÌ,H¿	RMAJORZBUG
 _squid:S1148
-"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8í«™ÿÌ,H¶RMINORZVULNERABILITY
+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8í«™ÿÌ,HÌ	RMINORZVULNERABILITY
+jsquid:S1135	"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8í«™ÿÌ,HÚ	RINFOZ
+CODE_SMELL

@@ -1,7 +1,7 @@
 
-usquid:S1126b"AReplace this if-then-else statement by a single return statement.(ÙÜ¬»8¯€óÎÍ,HØRMINORZ
+Tsquid:S2129!" Remove this "String" constructor(¤„˜Þ8ã•íˆÏ,Hà	RMAJORZ
 CODE_SMELL
-‰squid:S2975<"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(ÌÚêô8¤â±ÎÍ,HÕRBLOCKERZ
+usquid:S1126f"AReplace this if-then-else statement by a single return statement.(ÙÜ¬»8ã•íˆÏ,Hç	RMINORZ
 CODE_SMELL
-Tsquid:S2129" Remove this "String" constructor(¤„˜Þ8œþÏÍ,HíRMAJORZ
+‰squid:S2975>"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(ÌÚêô8ã•íˆÏ,HÕ	RBLOCKERZ
 CODE_SMELL

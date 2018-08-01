@@ -1,8 +1,0 @@
-package com.sapient;
-
-public class Atm {
-	
-	int id;
-	String location;
-
-}
