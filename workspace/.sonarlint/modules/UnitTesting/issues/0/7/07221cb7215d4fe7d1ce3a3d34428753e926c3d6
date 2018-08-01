@@ -1,0 +1,7 @@
+
+usquid:S2184("HCast one of the operands of this multiplication operation to a "double".(øêõë8¼û†Í,HµRMINORZBUG
+usquid:S1126"AReplace this if-then-else statement by a single return statement.(Â°Ç•8—ğã„Í,H±RMINORZ
+CODE_SMELL
+s
+squid:S106'";Replace this usage of System.out or System.err by a logger.(”é†¤úÿÿÿÿ8¼û†Í,H³RMAJORZ
+CODE_SMELL

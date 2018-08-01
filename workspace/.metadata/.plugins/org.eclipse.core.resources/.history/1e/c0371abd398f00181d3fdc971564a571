@@ -1,0 +1,24 @@
+package com.sapient;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestA {
+
+	private A a;
+
+	@Before
+	public void setUp() throws Exception {
+		
+		a = new A();
+	}
+
+	@Test
+	public void test() {
+		int result = a.m1();
+		assertEquals(1, result);
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.sapient;
+
+public class Payment {
+	
+	Sms sms;
+	TransactionRepo repo;
+	
+	
+	
+	public Payment(TransactionRepo repo, Sms sms) {
+		super();
+		this.repo = repo;
+		this.sms = sms;
+	}
+
+
+
+	public boolean fundsTransfer(int debitAccount, int creditAccount, double amount){
+		
+		// Credit
+		boolean result = repo.transact(creditAccount, amount);
+		
+		// Debit
+		
+		
+		//SMS 
+		if(result && sms.sendMessage("some arg")){
+			return true;
+		}
+		
+		
+		return false;
+		
+	}
+
+}

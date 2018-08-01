@@ -1,0 +1,9 @@
+package java102.cloning;
+
+public class Address {
+	
+	int houseNumber;
+	String location;
+	String city;
+
+}

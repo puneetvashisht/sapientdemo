@@ -1,0 +1,22 @@
+package com.sapient;
+
+public class Payment {
+	
+	Sms sms;
+	
+	public boolean fundsTransfer(int debitAccount, int creditAccount, double amount){
+		
+		// Credit
+		
+		// Debit
+		
+		
+		//SMS 
+			sms.sendMessage("Transfered: " + amount + " to your account: " + creditAccount);
+		
+		
+		return true;
+		
+	}
+
+}

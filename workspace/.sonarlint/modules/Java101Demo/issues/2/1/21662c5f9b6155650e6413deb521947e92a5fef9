@@ -1,0 +1,14 @@
+
+ˆsquid:S1450"PRemove the "a" field and declare it as a local variable in the relevant methods.(å¿Şìûÿÿÿÿ8ñøÊùÌ,HFRMINORZ
+CODE_SMELL
+m
+squid:S106.";Replace this usage of System.out or System.err by a logger.(¹ÁŸ›8öªÏùÌ,H]RMAJORZ
+CODE_SMELL
+r
+squid:S1064";Replace this usage of System.out or System.err by a logger.(å¼¦¦ùÿÿÿÿ8öªÏùÌ,H_RMAJORZ
+CODE_SMELL
+]squid:S1068"%Remove this unused "a" private field.(å¿Şìûÿÿÿÿ8ğøÊùÌ,HERMAJORZ
+CODE_SMELL
+m
+squid:S1061";Replace this usage of System.out or System.err by a logger.(Æƒİ¯8èÓùÌ,HfRMAJORZ
+CODE_SMELL

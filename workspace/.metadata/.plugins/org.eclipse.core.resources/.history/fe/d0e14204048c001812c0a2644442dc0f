@@ -1,0 +1,10 @@
+package com.sapient;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Atm atm1 = new Atm(1, "Marathalli");
+
+	}
+
+}

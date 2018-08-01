@@ -1,0 +1,20 @@
+package test.com.sapient;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sapient.Payment;
+
+public class TestPayment {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testFundsTransfer() {
+		Payment payment = new Payment();
+		payment.fundsTransfer(123, 456, 10000);
+	}
+
+}

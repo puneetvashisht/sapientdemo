@@ -1,0 +1,42 @@
+package test.com.sapient;
+
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sapient.Payment;
+import com.sapient.Sms;
+import com.sapient.TransactionRepo;
+import com.sapient.TransactionRepoStub;
+
+public class TestPayment {
+	
+	Sms smsMock;
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testFundsTransfer() {
+		
+		Sms smsMock = mock(Sms.class);
+		TransactionRepo repo = new TransactionRepoStub();
+		
+		when(smsMock.sendMessage("some arg"))
+		   .thenReturn(true);
+		
+		boolean mockedResult =smsMock.sendMessage("some arg");
+		
+		
+//		Sms sms = new Sms();
+		Payment payment = new Payment(repo, smsMock);
+		boolean result = payment.fundsTransfer(123, 456, 10000);
+		System.out.println(result);
+		assertTrue(result);
+	}
+
+}

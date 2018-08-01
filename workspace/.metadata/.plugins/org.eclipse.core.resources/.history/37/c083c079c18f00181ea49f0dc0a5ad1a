@@ -1,0 +1,28 @@
+package com.sapient;
+
+public class Calc {
+	
+	public int sum(int ...values){
+		int total = 0;
+		for(int value: values){
+			total+=value;
+		}
+		
+		return total;
+	}
+
+	public int mul(int ...values) {
+		int total = 1;
+		for(int value: values){
+			total*=value;
+		}
+		
+		return total;
+	}
+
+	public int divide(int i, int j) {
+		// TODO Auto-generated method stub
+		return i/j;
+	}
+
+}

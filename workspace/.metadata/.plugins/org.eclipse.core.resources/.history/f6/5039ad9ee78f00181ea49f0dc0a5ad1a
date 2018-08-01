@@ -1,0 +1,26 @@
+package test.com.sapient;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sapient.Payment;
+import com.sapient.TransactionRepo;
+import com.sapient.TransactionRepoStub;
+
+public class TestPayment {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testFundsTransfer() {
+		TransactionRepo repo = new TransactionRepoStub();
+		Payment payment = new Payment(repo);
+		boolean result = payment.fundsTransfer(123, 456, 10000);
+		assertTrue(result);
+	}
+
+}

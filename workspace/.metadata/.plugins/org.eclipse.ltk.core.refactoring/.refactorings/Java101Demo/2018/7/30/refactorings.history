@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;com.sapient.TestA.setUp().a&apos; in &apos;com.sapient.TestA.setUp()&apos; to field&#x0A;- Original project: &apos;Java101Demo&apos;&#x0A;- Original element: &apos;com.sapient.TestA.setUp().a&apos;&#x0A;- Field name: &apos;a&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;a&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;com.sapient{TestA.java" name="a" selection="184 8" stamp="1532433777967" static="false" version="1.0" visibility="2"/>
+</session>

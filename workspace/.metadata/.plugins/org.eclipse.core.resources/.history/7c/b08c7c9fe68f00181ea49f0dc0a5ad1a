@@ -1,0 +1,5 @@
+package com.sapient;
+
+public interface TransactionRepo {
+
+}

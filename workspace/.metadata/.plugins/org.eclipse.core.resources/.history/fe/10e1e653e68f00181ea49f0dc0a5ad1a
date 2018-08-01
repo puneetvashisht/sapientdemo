@@ -1,0 +1,10 @@
+package com.sapient;
+
+public class Sms {
+
+	public void sendMessage(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

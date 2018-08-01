@@ -1,0 +1,7 @@
+package com.sapient;
+
+public interface TransactionRepo {
+	
+	void transact(int accountNumber, double amount);
+
+}
