@@ -7,7 +7,6 @@ INDEX VERSION 1.130+/Users/puneetvashisht/work/trainings/sapientdemo/Java101/wor
 624708564.index
 3768686107.index
 3157663476.index
-1162944838.index
 1044104405.index
 2932191785.index
 576073405.index

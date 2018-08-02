@@ -3,6 +3,8 @@ package java101.java8;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class EmployeeTest {
 
@@ -29,13 +31,23 @@ public class EmployeeTest {
 		printConditionally(employees, (e)->e.getFirstName().startsWith("R"));
 		printConditionally(employees, (e)->e.getLastName().startsWith("C"));
 		
-
+		printConditionally(employees, (e)->e.getFirstName().startsWith("R"), (e)->System.out.println(e.firstName));
+		printConditionally(employees, (e)->e.getFirstName().startsWith("R"), (e)->System.out.println(e));
 	}
 	
-	public static void printConditionally(List<Employee> employees, Condition condition){
+	public static void printConditionally(List<Employee> employees, Predicate<Employee> predicate){
 		for(Employee e: employees){
-			if(condition.test(e)){
+			if(predicate.test(e)){
 				System.out.println(e);
+			}
+			
+		}
+	}
+	
+	public static void printConditionally(List<Employee> employees, Predicate<Employee> predicate, Consumer<Employee> consumer){
+		for(Employee e: employees){
+			if(predicate.test(e)){
+				consumer.accept(e);
 			}
 			
 		}
