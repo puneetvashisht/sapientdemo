@@ -1,7 +1,0 @@
-package com.sapient;
-
-public interface TransactionRepo {
-	
-	transact(int accountNumber, double amount);
-
-}

@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<item value="/Users/puneetvashisht/Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="renameSubpackages"/>
 		<item value="false" key="updateQualifiedNames"/>
 		<item value="*" key="patterns"/>
 		<item value="false" key="updateSimilarElements"/>
@@ -80,14 +81,14 @@
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="519" key="DIALOG_WIDTH"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
-		<item value="600" key="DIALOG_HEIGHT"/>
+		<item value="577" key="DIALOG_HEIGHT"/>
 		<item value="141" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item value="504" key="DIALOG_WIDTH"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
-		<item value="600" key="DIALOG_HEIGHT"/>
+		<item value="577" key="DIALOG_HEIGHT"/>
 		<item value="148" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>

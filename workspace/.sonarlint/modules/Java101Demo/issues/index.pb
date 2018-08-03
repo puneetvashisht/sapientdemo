@@ -71,3 +71,25 @@ Y
 .src/java102/concurrency/FactorialCallable.java,c/3/c3e0cb85cdcb36acfa051c3e8ca4c14519b49ff5
 \
 ,src/java102/concurrency/ThreadPoolDemo2.java,8/4/841fecc118cca62aa12dc181bd7f3557b8bf6aab
+^
+.src/java102/synchronizers/TestConnections.java,3/1/3172f41d268aae3fcbe5303d1726cc84178b7339
+]
+-src/java102/synchronizers/SomeRepository.java,7/a/7a11cecd133df87953a72a7797ec7ac53e1b5de8
+N
+src/java101/java8/Greeter.java,1/2/125dc36a6aba23ed9bf8b8326b6baf29ce2847ae
+W
+'src/java101/java8/JapaneseGreeting.java,9/c/9cc85ba5559392f0f32916a7f2fd83a79f241e0c
+P
+ src/java101/java8/IGreeting.java,b/1/b11c7c991c8db50f1ae76936890299130c9add08
+R
+"src/java101/java8/TestGreeter.java,4/e/4e12e56ad6c907bf2fbddb125bcd79d072f5729b
+O
+src/java101/java8/Employee.java,5/5/5589cf2ae4718ef8f5abcef23c73c6f98b250d59
+P
+ src/java101/java8/Condition.java,e/0/e04de92f27f96d042914065b5fcb96fa47e13a7e
+S
+#src/java101/java8/EmployeeTest.java,b/0/b0ff87039daf491ae627c72de4e4297266983e74
+R
+"src/java101/java8/ClosureTest.java,8/4/84f84ee46e46aa881680f5787b4ef4f142863743
+Y
+)src/com/demo_04/dateTime/NashornDemo.java,b/8/b8ca58c8ac61d1a6a1c4bb4f5f3e87fa4f8395e1

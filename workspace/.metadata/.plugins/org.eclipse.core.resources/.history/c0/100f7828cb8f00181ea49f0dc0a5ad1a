@@ -1,8 +1,0 @@
-package com.sapient;
-
-public class Atm {
-
-	public double cashWithdraw(){
-		return 2000.00;
-	}
-}
