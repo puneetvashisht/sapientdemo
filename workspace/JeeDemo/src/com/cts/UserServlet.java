@@ -20,12 +20,15 @@ public class UserServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
+		
+		User user = new User(name, password);
+		
 		System.out.println(name + " : " + password);
 		if(name.equals(password)){
 			
 			RequestDispatcher rd = request.getRequestDispatcher("profile.jsp");
 //			response.getWriter().println("<div class=\"card\" style=\"width: 18rem;\">");
-			request.setAttribute("username", name);
+			request.setAttribute("user", user);
 			rd.forward(request, response);
 
 		}

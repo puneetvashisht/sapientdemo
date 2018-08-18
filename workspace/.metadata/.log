@@ -1422,3 +1422,9 @@ java.io.FileNotFoundException:
 
 !ENTRY org.eclipse.jface.text 2 0 2018-08-18 10:15:47.664
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-08-18 11:54:05.818
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-08-18 11:54:05.821
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
