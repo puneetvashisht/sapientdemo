@@ -10,17 +10,39 @@
                 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
 	
-	<bean id="a" class="com.sapient.A">
+	<context:component-scan base-package="com.sapient"></context:component-scan>
+	
+	<!-- <bean id="dataSource" class="com.sapient.DataSource">
+		<property name="url" value="locahost:27017/cogdb"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean> -->
+	
+	<context:property-placeholder location="db.properties"/>
+	<bean id="dataSource" class="com.sapient.DataSource">
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${username}"></property>
+		<property name="password" value="${pwd}"></property>
+	</bean>
+
+	
+	
+	<!-- <context:property-placeholder location="db.properties"/> -->
+	
+	
+	
+	<!-- <bean id="a" class="com.sapient.A">
 		<constructor-arg name="b" ref="b"></constructor-arg>
 		<constructor-arg name="c" ref="c"></constructor-arg>
 	</bean>
-	<bean id="b" class="com.sapient.B"></bean>
+	<bean id="b" class="com.sapient.B" ></bean>
 	<bean id="c" class="com.sapient.C"></bean>
 	
 	<bean id="transferRepo" class="com.sapient.TransferRepo"/>
 	<bean id="transferService" class="com.sapient.TransferService">
 		<constructor-arg name="repo" ref="transferRepo"></constructor-arg>
+		<property name="repo" ref="transferRepo"></property>
 	</bean>
-	
+	 -->
 
 </beans>

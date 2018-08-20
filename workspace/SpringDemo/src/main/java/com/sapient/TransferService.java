@@ -1,8 +1,12 @@
 package com.sapient;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+@Component
 public class TransferService {
-	
+
 	TransferRepo repo; // = new TransferRepo();
+	
 	
 	public TransferService(TransferRepo repo) {
 		super();
@@ -13,5 +17,15 @@ public class TransferService {
 		repo.fetchAccount(account1);
 		System.out.println("Transferin....");
 	}
+
+	public TransferRepo getRepo() {
+		return repo;
+	}
+	@Autowired
+	public void setRepo(TransferRepo repo) {
+		this.repo = repo;
+	}
+	
+	
 
 }
