@@ -23,7 +23,15 @@
 		<property name="url" value="${url}"></property>
 		<property name="username" value="${username}"></property>
 		<property name="password" value="${pwd}"></property>
+		
+		<!-- <property name="">
+			<set>
+				<ref></ref>
+			</set>
+		</property> -->
 	</bean>
+	
+	
 
 	
 	
