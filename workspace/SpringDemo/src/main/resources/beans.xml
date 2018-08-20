@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:security="http://www.springframework.org/schema/security"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+                http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	
+	<bean id="a" class="com.sapient.A">
+		<constructor-arg name="b" ref="b"></constructor-arg>
+		<constructor-arg name="c" ref="c"></constructor-arg>
+	</bean>
+	<bean id="b" class="com.sapient.B"></bean>
+	<bean id="c" class="com.sapient.C"></bean>
+	
+	<bean id="transferRepo" class="com.sapient.TransferRepo"/>
+	<bean id="transferService" class="com.sapient.TransferService">
+		<constructor-arg name="repo" ref="transferRepo"></constructor-arg>
+	</bean>
+	
+
+</beans>
