@@ -35,12 +35,12 @@ public class CourseController {
 	
 	
 	@RequestMapping(path="/course", method=RequestMethod.GET)
-	public String fetchCourses(Model model, @RequestParam("name") String name,@RequestParam("courseid") int id){
+	public String fetchCourses(Model model, @RequestParam("name") String name){
 		System.out.println("Controller code invoked.." + name);
-		System.out.println(id);
-		Course course = repo.findCourse(name);
+//		System.out.println(id);
+		List<Course> courses = repo.findCourse(name);
 		
-		model.addAttribute("courses", course);
+		model.addAttribute("courses", courses);
 		return "courseview";
 		
 	}
@@ -51,10 +51,10 @@ public class CourseController {
 		Course course = new Course(0, name, summary);
 		
 		
-		// repo.addCourse(course)
+		Course addedCourse =  repo.addCourse(course);
 		// addd course to db.. repo		
 		model.addAttribute("message", "Course successfully added!!");
-		model.addAttribute("courses", course);
+		model.addAttribute("courses", addedCourse);
 		return "courseview";
 		
 	}

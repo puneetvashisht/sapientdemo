@@ -6,5 +6,6 @@ import com.sapient.models.Course;
 
 public interface ICoursesRepo {
 	public List<Course> findAllCourses() ;
-	public Course findCourse(String name);
+	public List<Course> findCourse(String name);
+	public Course addCourse(Course course);
 }

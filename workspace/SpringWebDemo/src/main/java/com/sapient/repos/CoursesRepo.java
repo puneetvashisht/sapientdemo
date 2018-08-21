@@ -71,8 +71,14 @@ public class CoursesRepo implements ICoursesRepo {
 		return courses;
 	}
 
-	public Course findCourse(String name) {
-		return new Course(12, "TestCourse", "Test Summary");
+	public List<Course> findCourse(String name) {
+		return null;
+	}
+
+	@Override
+	public Course addCourse(Course course) {
+		return null;
+		
 	}
 
 }
