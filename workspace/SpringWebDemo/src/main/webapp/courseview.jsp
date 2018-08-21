@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h2>Course View Contents</h2>
-	<p>${courseName} </p>
+	<p>${courses} </p>
 </body>
 </html>
