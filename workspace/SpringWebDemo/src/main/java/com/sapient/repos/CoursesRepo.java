@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import com.sapient.models.Course;
 
 @Repository
-public class CoursesRepo {
+public class CoursesRepo implements ICoursesRepo {
 	
 	public static void main(String[] args) {
 		List<Course> courses = new CoursesRepo().findAllCourses();
@@ -69,6 +69,10 @@ public class CoursesRepo {
 			e.printStackTrace();
 		}
 		return courses;
+	}
+
+	public Course findCourse(String name) {
+		return new Course(12, "TestCourse", "Test Summary");
 	}
 
 }

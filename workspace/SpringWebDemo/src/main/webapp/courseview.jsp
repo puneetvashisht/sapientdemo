@@ -7,6 +7,7 @@
 <title>Course View</title>
 </head>
 <body>
+	<p>${message} </p>
 	<h2>Course View Contents</h2>
 	<p>${courses} </p>
 </body>
