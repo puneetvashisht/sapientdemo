@@ -15,6 +15,9 @@ public class Test {
 //		A a = context.getBean(A.class);
 //		a.execute();
 		
+
+
+		
 //		TransferService service = (TransferService) context.getBean("transferService");
 		TransferService service = context.getBean(TransferService.class);
 		TransferService service1 = context.getBean(TransferService.class);
