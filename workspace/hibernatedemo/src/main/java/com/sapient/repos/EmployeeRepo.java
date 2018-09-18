@@ -1,5 +1,6 @@
 package com.sapient.repos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,7 +9,9 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
+import com.sapient.entity.Address;
 import com.sapient.entity.Employee;
+import com.sapient.entity.EmployeeDetail;
 
 public class EmployeeRepo {
 	
@@ -38,6 +41,7 @@ public class EmployeeRepo {
 	public Employee findEmployee(int id){
 		EntityManager em = emf.createEntityManager();
 		Employee emp = em.find(Employee.class, id);
+		System.out.println(emp.getAddresses());
 		em.close();
 		return emp;
 	}
@@ -88,12 +92,20 @@ public class EmployeeRepo {
 	
 	public static void main(String[] args) {
 		EmployeeRepo repo = new EmployeeRepo();
-		Employee emp = new Employee("Ravi", 343344.34);
+		Address add1 = new Address("GK", "New Delhi");
+		Address add2 = new Address("Matundu", "Nairobi");
+		
+		EmployeeDetail edetails = new EmployeeDetail(3);
+		Employee emp = new Employee("Priya", 343354.34, edetails);
+		List<Address> addresses = new ArrayList<>();
+		addresses.add(add1);addresses.add(add2);
+ 		
+		emp.setAddresses(addresses);
 //		emp.setId(2);
 		repo.addEmployee(emp);
-//		Employee emp2 = repo.findEmployee(3);
+//		Employee emp2 = repo.findEmployee(8);
 //		System.out.println(emp2);
-		
+//		System.out.println(emp2.getAddresses());
 //		repo.updateEmployee(4, "Rosh");
 //		repo.deleteEmployee(4);
 		
