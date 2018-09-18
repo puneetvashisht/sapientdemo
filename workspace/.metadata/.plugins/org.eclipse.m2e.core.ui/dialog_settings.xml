@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="SpringWebDemo"/>
 			<item value="SpringDemo"/>
 		</list>
 		<list key="name">
+			<item value="SpringWebDemo"/>
 			<item value="SpringDemo"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringWebDemo"/>
 			<item value="SpringDemo"/>
 		</list>
 		<list key="projectNameTemplate">

@@ -6,6 +6,10 @@ public class Course {
 	int id;
 	String name;
 	String summary;
+	
+	public Course(){
+		
+	}
 	public Course(int id, String name, String summary) {
 		super();
 		this.id = id;
