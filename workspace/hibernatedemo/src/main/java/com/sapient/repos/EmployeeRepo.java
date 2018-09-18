@@ -1,9 +1,12 @@
 package com.sapient.repos;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
 import com.sapient.entity.Employee;
 
@@ -12,15 +15,59 @@ public class EmployeeRepo {
 	// Create Entity Manager Factory
 	static EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernatedemo");
 	
+	public List<Employee> findAllEmployees(){
+		EntityManager em = emf.createEntityManager();
+		TypedQuery<Employee> query = em.createQuery("select e from Employee e", Employee.class);
+		List<Employee> employees  = query.getResultList();
+
+		em.close();
+		return employees;
+	}
+	
+	public List<Employee> findEmployeesByNamme(String name){
+		EntityManager em = emf.createEntityManager();
+		TypedQuery<Employee> query = em.createQuery("select e from Employee e where e.name=:x", Employee.class);
+		query.setParameter("x", name);
+		List<Employee> employees  = query.getResultList();
+		
+
+		em.close();
+		return employees;
+	}
 	
 	public Employee findEmployee(int id){
 		EntityManager em = emf.createEntityManager();
-		
 		Employee emp = em.find(Employee.class, id);
 		em.close();
 		return emp;
 	}
 	
+	public void deleteEmployee(int id){
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		Employee emp = em.find(Employee.class, id);
+		em.remove(emp);
+		
+		tx.commit();
+		em.close();
+	}
+	
+	
+	public void updateEmployee(int id, String newName){
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		Employee emp = em.find(Employee.class, id);
+		
+	
+		
+		tx.commit();
+		em.close();
+		
+		emp.setName(newName);
+	}
 	public void addEmployee(Employee emp){
 		//Entity Manager --> physical connection to db
 		EntityManager em = emf.createEntityManager();
@@ -41,11 +88,21 @@ public class EmployeeRepo {
 	
 	public static void main(String[] args) {
 		EmployeeRepo repo = new EmployeeRepo();
-		Employee emp = new Employee("Ravi");
+		Employee emp = new Employee("Ravi", 343344.34);
 //		emp.setId(2);
-//		repo.addEmployee(emp);
-		Employee emp2 = repo.findEmployee(3);
-		System.out.println(emp2);
+		repo.addEmployee(emp);
+//		Employee emp2 = repo.findEmployee(3);
+//		System.out.println(emp2);
+		
+//		repo.updateEmployee(4, "Rosh");
+//		repo.deleteEmployee(4);
+		
+//		List<Employee> emps = repo.findAllEmployees();
+//		System.out.println(emps);
+		
+//		List<Employee> emps = repo.findEmployeesByNamme("Rosh");
+//		System.out.println(emps);
+		
 	}
 
 }
