@@ -1,5 +1,6 @@
 package com.sapient.repos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -12,7 +13,9 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+import com.sapient.entity.Address;
 import com.sapient.entity.Employee;
+import com.sapient.entity.EmployeeDetail;
 
 public class EmployeeRepo {
 
@@ -44,8 +47,22 @@ public class EmployeeRepo {
 	public Employee findEmployee(int id) {
 		EntityManager em = emf.createEntityManager();
 		Employee emp = em.find(Employee.class, id);
-		System.out.println(emp.getAddresses());
-		em.close();
+//		System.out.println(emp.getAddresses());
+		em.close();	
+		
+		//Detached Object
+		emp.setName("Ravi");
+		
+		//Merge it back to a persistent object
+		em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.merge(emp);
+		
+		tx.commit();
+		em.close();	
+		
+		
 		return emp;
 	}
 
@@ -65,12 +82,11 @@ public class EmployeeRepo {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		Employee emp = em.find(Employee.class, id);
-
+		Employee emp = em.find(Employee.class, id);	
+		emp.setName(newName);	
 		tx.commit();
 		em.close();
 
-		emp.setName(newName);
 	}
 
 	public void addEmployee(Employee emp) {
@@ -133,22 +149,25 @@ public class EmployeeRepo {
 
 	public static void main(String[] args) {
 		EmployeeRepo repo = new EmployeeRepo();
-		repo.test();
-		// Address add1 = new Address("GK", "New Delhi");
-		// Address add2 = new Address("Matundu", "Nairobi");
-		//
-		// EmployeeDetail edetails = new EmployeeDetail(3);
-		// Employee emp = new Employee("Priya", 343354.34, edetails);
-		// List<Address> addresses = new ArrayList<>();
-		// addresses.add(add1);addresses.add(add2);
-		//
-		// emp.setAddresses(addresses);
-		//// emp.setId(2);
-		// repo.addEmployee(emp);
-		// Employee emp2 = repo.findEmployee(8);
-		// System.out.println(emp2);
-		// System.out.println(emp2.getAddresses());
-		// repo.updateEmployee(4, "Rosh");
+////		repo.test();
+//		repo.updateEmployee(13, "Ravi");
+		
+//		 Address add1 = new Address("GK", "New Delhi");
+//		 Address add2 = new Address("Matundu", "Nairobi");
+//		
+//		 EmployeeDetail edetails = new EmployeeDetail(3);
+//		 Employee emp = new Employee("Priya", 343354.34, edetails);
+//		 List<Address> addresses = new ArrayList<>();
+//		 addresses.add(add1);addresses.add(add2);
+//		
+//		 emp.setAddresses(addresses);
+//		// emp.setId(2);
+//		 repo.addEmployee(emp);
+		 Employee emp2 = repo.findEmployee(8);
+		 System.out.println(emp2);
+//		 System.out.println(emp2.getAddresses());
+//		 System.out.println(emp2.getAddresses());
+		 
 		// repo.deleteEmployee(4);
 
 //		 List<Employee> emps = repo.findAllEmployees();
