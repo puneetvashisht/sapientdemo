@@ -1,12 +1,15 @@
 package com.sapient.repos;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
+import com.sapient.models.CourseEntity;
 
-import com.sapient.entities.CourseEntity;
 
 @Repository
 public class CoursesJpaRepo {
@@ -19,12 +22,19 @@ public class CoursesJpaRepo {
 		return em.find(CourseEntity.class, id);     
 	 }
 
+	
+	public List<CourseEntity> findAllCourses() {
+		
+		TypedQuery<CourseEntity> query =em.createNamedQuery("findAllCourses", CourseEntity.class);
+		List<CourseEntity> employees = query.getResultList();
+		em.close();
+		return employees;
+	}
+
 	@Transactional
-	public void addCourse(CourseEntity course) throws Exception {
+	public void addCourse(CourseEntity course){
 		em.persist(course);
-		if(course.getName().equals("Angular")){
-			throw new Exception("No angular courses");
-		}
+		
 	}
 
 

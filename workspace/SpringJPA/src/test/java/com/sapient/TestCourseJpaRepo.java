@@ -21,10 +21,15 @@ public class TestCourseJpaRepo {
 		System.out.println(course);
 	}
 	
-	@Test
+	@Test(expected=Exception.class)
 	public void testAddCourse(){
-		CourseEntity course = new CourseEntity("JS", "Core library");
-		repo.addCourse(course);
+		CourseEntity course = new CourseEntity("Angular", "Core library");
+		try {
+			repo.addCourse(course);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(course);
 	}
 
