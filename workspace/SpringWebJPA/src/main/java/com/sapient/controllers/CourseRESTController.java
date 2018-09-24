@@ -3,6 +3,8 @@ package com.sapient.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sapient.common.CourseNotFoundException;
 import com.sapient.models.CourseEntity;
 import com.sapient.repos.CoursesJpaRepo;
 
@@ -34,6 +37,9 @@ public class CourseRESTController {
 		System.out.println("REST Controller code invoked..");
 		CourseEntity course = jpaRepo.findCourseById(id);
 		System.out.println(course);
+		if(course == null){
+			throw new CourseNotFoundException(id + ": not found");
+		}
 		return course;
 	}
 	@RequestMapping(path="/courses/{courseid}", method=RequestMethod.DELETE)
@@ -43,13 +49,17 @@ public class CourseRESTController {
 	}
 	
 	
-	
-	
 	@RequestMapping(path="/courses", method=RequestMethod.POST)
-	public CourseEntity addCourse(@RequestBody CourseEntity course){
+	public ResponseEntity<Void> addCourse(@RequestBody CourseEntity course){
 		System.out.println("REST Controller code invoked..");
 		jpaRepo.addCourse(course);
-		return course;
+		if(course.getName().equals("Angular")){
+			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
+		}
+		
+		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		
+//		return course;
 	}
 	
 	@RequestMapping(path="/courses", method=RequestMethod.PUT)

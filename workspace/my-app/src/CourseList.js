@@ -32,9 +32,12 @@ class CourseList extends Component {
             return <li className="list-group-item" key={index}><p>{course.name}<button type="button" className="btn btn-danger" onClick={this.deleteCourse.bind(this,course.id)}>Delete</button></p></li>
         })
         return (
-            <ul className="list-group">
-                {coursesList}
-            </ul>
+            <div>
+                <h2>View Courses</h2>
+                <ul className="list-group">
+                    {coursesList}
+                </ul>
+            </div>
         );
     }
 }
