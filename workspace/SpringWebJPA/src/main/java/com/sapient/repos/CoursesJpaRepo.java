@@ -23,12 +23,26 @@ public class CoursesJpaRepo {
 	 }
 
 	
-	public List<CourseEntity> findAllCourses() {
-		
+	public List<CourseEntity> findAllCourses() {		
 		TypedQuery<CourseEntity> query =em.createNamedQuery("findAllCourses", CourseEntity.class);
 		List<CourseEntity> employees = query.getResultList();
-		em.close();
+
 		return employees;
+	}
+	
+	public CourseEntity findCourseById(int id) {		
+		return em.find(CourseEntity.class, id);
+	}
+	
+	@Transactional
+	public void deleteCourse(int id) {		
+		CourseEntity courseEntity = em.find(CourseEntity.class, id);
+		em.remove(courseEntity);
+	}
+	
+	@Transactional
+	public void updateCourse(CourseEntity newCourseEntity){	
+		em.merge(newCourseEntity);
 	}
 
 	@Transactional

@@ -40,6 +40,8 @@ public class CourseController {
 	}
 	
 	
+	
+	
 	@RequestMapping(path="/course", method=RequestMethod.GET)
 	public String fetchCourses(Model model, @RequestParam("name") String name){
 		System.out.println("Controller code invoked.." + name);
