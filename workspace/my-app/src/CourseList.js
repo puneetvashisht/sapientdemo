@@ -15,6 +15,7 @@ class CourseList extends Component {
     }
 
     deleteCourse(courseid){
+        console.log('called now...')
         fetch('http://localhost:8080/SpringWebDemo/mvc/api/courses/'+ courseid, {
             method: 'delete'
           })
@@ -28,10 +29,10 @@ class CourseList extends Component {
 
         var coursesList = this.state.courses.map((course, index)=>{
             console.log(course);
-            return <li class="list-group-item" key={index}><p>{course.name}<button type="button" class="btn btn-danger" onClick={this.deleteCourse(course.id)}>Delete</button></p></li>
+            return <li className="list-group-item" key={index}><p>{course.name}<button type="button" className="btn btn-danger" onClick={this.deleteCourse.bind(this,course.id)}>Delete</button></p></li>
         })
         return (
-            <ul class="list-group">
+            <ul className="list-group">
                 {coursesList}
             </ul>
         );
