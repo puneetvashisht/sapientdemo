@@ -1,5 +1,7 @@
 package com.sapient.springbootdemo;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +14,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name="course")
 @NamedQuery(name = "findAllCourses", query = "select e from CourseEntity e")
 @XmlRootElement
-public class CourseEntity {
+public class CourseEntity implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
