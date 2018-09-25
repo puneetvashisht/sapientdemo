@@ -7,11 +7,13 @@
 			<item value="SpringDemo"/>
 		</list>
 		<list key="name">
+			<item value="SpringAOPDemo"/>
 			<item value="hibernatedemo"/>
 			<item value="SpringWebDemo"/>
 			<item value="SpringDemo"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringAOPDemo"/>
 			<item value="hibernatedemo"/>
 			<item value="SpringWebDemo"/>
 			<item value="SpringDemo"/>
@@ -42,6 +44,11 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/puneetvashisht/Downloads/Spring4MVCJmsActiveMQOrderInventory (1)"/>
+			<item value="/Users/puneetvashisht/Downloads/Spring4MVCJmsActiveMQOrderInventory"/>
+			<item value="/Users/puneetvashisht/Downloads/Spring4MVCJmsActiveMQExample"/>
+			<item value="/Users/puneetvashisht/Downloads/springbootdemo"/>
+			<item value="/Users/puneetvashisht/work/trainings/sapientdemo/gs-messaging-jms"/>
 			<item value="/Users/puneetvashisht/work/workspaces/JUnit_Test"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -65,6 +72,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/puneetvashisht/work/trainings/sapientdemo/Java101/workspace/Servers"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
