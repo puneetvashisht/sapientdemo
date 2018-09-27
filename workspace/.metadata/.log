@@ -2726,3 +2726,9 @@ Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Failure to tra
 	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:503)
 	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421)
 	... 41 more
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-09-26 14:56:46.222
+!MESSAGE Server Tomcat v8.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-09-26 14:57:42.755
+!MESSAGE Server Tomcat v8.0 Server at localhost failed to start.
